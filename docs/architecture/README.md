@@ -1,11 +1,14 @@
-# High-Level Architecture
-
-AI Risk Inspector is designed as a modular platform that separates **risk execution**, **risk interpretation**, and **reporting** concerns.
-
 ```mermaid
 flowchart LR
-    A[GenAI System<br/>(LLM / Application)] --> B[Probe Execution Layer]
-    B --> C[Result Normalization]
-    C --> D[Risk Mapping Engine]
-    D --> E[Aggregation & Scoring]
-    E --> F[Reporting & Visualization]
+    A[GenAI System (LLM / Application)]
+    B[Probe Execution Layer]
+    C[Result Normalization]
+    D[Risk Mapping Engine]
+    E[Aggregation and Scoring]
+    F[Reporting and Visualization]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
